@@ -1,27 +1,47 @@
-﻿using System;
-
-class DiscountCalculator
+﻿class DiscountCalculator
 {
     static void Main()
     {
-        
-        Console.Write("Enter the original price of the item: ");
-        double originalPrice = double.Parse(Console.ReadLine());
+        double originalPrice;
+        bool isOriginalPriceValid;
+
+        do
+        {
+            Console.Write("Enter the original price of the item: ");
+            isOriginalPriceValid = double.TryParse(Console.ReadLine(), out originalPrice);
+
+            if (!isOriginalPriceValid)
+            {
+                Console.WriteLine("Invalid input. Please enter a valid numeric value for the original price.");
+            }
+
+        } while (!isOriginalPriceValid);
+
+        double discountPercent;
+        bool isDiscountPercentValid;
+
+        do
+        {
+            Console.Write("Enter the discount percentage (e.g., 25 for 25%): ");
+            isDiscountPercentValid = double.TryParse(Console.ReadLine(), out discountPercent);
+
+            if (!isDiscountPercentValid)
+            {
+                Console.WriteLine("Invalid input. Please enter a valid numeric value for the discount percentage.");
+            }
+
+        } while (!isDiscountPercentValid);
 
      
-        Console.Write("Enter the discount percentage (e.g., 25 for 25%): ");
-        double discountPercent = double.Parse(Console.ReadLine()) / 100; 
-        
-        double discountAmount = originalPrice * discountPercent;
-
-      
+        double discountAmount = originalPrice * discountPercent / 100;
         double finalPrice = originalPrice - discountAmount;
 
-     
-        Console.WriteLine("Original price: ${0:0.00}", originalPrice);
-        Console.WriteLine("Discount amount: ${0:0.00}", discountAmount);
-        Console.WriteLine("Final price: ${0:0.00}", finalPrice);
+        Console.WriteLine($"Original price: ${originalPrice}");
+        Console.WriteLine($"Discount amount: ${discountAmount}");
+        Console.WriteLine($"Final price: ${finalPrice}");
 
-        Console.ReadLine(); 
+
+        
+        Console.ReadLine();
     }
 }
