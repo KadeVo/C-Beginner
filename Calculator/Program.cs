@@ -27,19 +27,19 @@ class Rectangle
         {
             case "+":
                 result = num1 + num2;
-                Console.WriteLine(result); 
+                Console.WriteLine($"Result: {num1} + {num2} = {result}");
                 break;
             case "-":
                 result = num1 - num2;
-                Console.WriteLine(result);
-            break;
+                Console.WriteLine($"Result: {num1} - {num2} = {result}");
+                break;
             case "*":
                 result = num1 * num2;
-                Console.WriteLine(result);
+                Console.WriteLine($"Result: {num1} * {num2} = {result}");
                 break;
             case "/":
                 result = num1 / num2;
-                Console.WriteLine(result);
+                Console.WriteLine($"Result: {num1} / {num2} = {result}");
                 break;
             default: Console.WriteLine("Not a valid Symbol");
                 break;
