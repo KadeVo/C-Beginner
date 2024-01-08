@@ -4,9 +4,7 @@ class Calculator
 {
     static void Main()
     {
-        double num1 = 0;
-        double num2 = 0;
-        double result = 0;
+        double num1, num2, result;
 
         do
         {
