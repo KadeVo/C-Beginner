@@ -6,6 +6,7 @@
 <ul>
   <li>A percentage calculator</li>
     <li>A random item picker</li>
-     <li>A simple calculator with addition, subtraction, multiplication and division</li>
+     <li>A calculator with multiple operations</li>
   <li>A calculator to find the area of a rectangle</li>
+    <li>Testing of solutions</li>
 </ul>
