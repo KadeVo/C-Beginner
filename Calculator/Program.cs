@@ -1,6 +1,6 @@
 ﻿using System;
 
-class Calculator
+public class Calculator
 {
     static void Main()
     {
