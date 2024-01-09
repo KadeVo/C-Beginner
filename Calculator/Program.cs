@@ -20,6 +20,8 @@ class Calculator
             Console.WriteLine(("- : Subtraction"));
             Console.WriteLine(("/ : Division"));
             Console.WriteLine(("* : Multiplication"));
+            Console.WriteLine(("^ : Exponentiation"));
+            Console.WriteLine(("% : Modulus"));
 
 
             switch (Console.ReadLine())
@@ -40,9 +42,18 @@ class Calculator
                     result = num1 / num2;
                     Console.WriteLine($"Result: {num1} / {num2} = {result}");
                     break;
+                case "^":
+                    result = Math.Pow(num1, num2);
+                    Console.WriteLine($"Result: {num1} ^ {num2} = {result}");
+                    break;
+                case "%":
+                    result = num1 % num2;
+                    Console.WriteLine($"Result: {num1} % {num2} = {result}");
+                    break;
                 default:
                     Console.WriteLine("Not a valid Symbol");
                     break;
+
 
             }
             Console.WriteLine("Enter 'done' to finish or enter anything else to continue:");
