@@ -22,6 +22,7 @@ class Calculator
             Console.WriteLine(("* : Multiplication"));
             Console.WriteLine(("^ : Exponentiation"));
             Console.WriteLine(("% : Modulus"));
+            Console.WriteLine(("sqrt : Square root"));
 
 
             switch (Console.ReadLine())
@@ -49,6 +50,10 @@ class Calculator
                 case "%":
                     result = num1 % num2;
                     Console.WriteLine($"Result: {num1} % {num2} = {result}");
+                    break;
+                case "sqrt":
+                    result = Math.Sqrt(num1);  
+                    Console.WriteLine($"Result: sqrt({num1}) = {result}");
                     break;
                 default:
                     Console.WriteLine("Not a valid Symbol");
